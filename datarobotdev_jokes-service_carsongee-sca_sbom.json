@@ -5,7 +5,7 @@
   "serialNumber": "urn:uuid:8446d90f-65d7-48c5-9720-da73ead9e1e8",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-10-16T20:26:27+00:00",
+    "timestamp": "2023-10-16T20:26:27Z",
     "tools": [
       {
         "vendor": "aquasecurity",
