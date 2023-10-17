@@ -63,6 +63,7 @@
       "bom-ref": "c7681ef7-389d-4b0e-82e7-05becdf242d8",
       "type": "application",
       "name": "usr/local/bin/helm",
+      "version": "11.7",
       "properties": [
         {
           "name": "aquasecurity:trivy:Class",
