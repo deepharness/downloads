@@ -346,13 +346,13 @@
   {
    "name": "alternatives",
    "SPDXID": "SPDXRef-Package-rpm-alternatives-9319bcd88057ca07",
-   "versionInfo": "1.24-1.el9",
-   "supplier": "Organization: Red Hat, Inc.",
+   "versionInfo": "1.23",
+   "supplier": "Deep",
    "originator": "Organization: Red Hat, Inc.",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
    "sourceInfo": "acquired package info from RPM DB: /var/lib/rpm/rpmdb.sqlite",
-   "licenseConcluded": "NOASSERTION",
+   "licenseConcluded": "MIT",
    "licenseDeclared": "GPL-2.0-only",
    "copyrightText": "NOASSERTION",
    "externalRefs": [
@@ -369,7 +369,7 @@
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:rpm/rhel/alternatives@1.24-1.el9?arch=x86_64\u0026upstream=chkconfig-1.24-1.el9.src.rpm\u0026distro=rhel-9.3"
+     "referenceLocator": "pkg:rpm/rhel/alternatives@1.24-1.el9?arch=x86_64\deep\test"
     }
    ]
   },
