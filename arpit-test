@@ -1,0 +1,65 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "docker.io/autosscauser/varsha-test:latest8",
+  "documentNamespace": "http://aquasecurity.github.io/trivy/container_image/docker.io/autosscauser/varsha-test:latest8-8a53707f-f0ea-4a48-88af-d440c97d8d23",
+  "creationInfo": {
+    "creators": [
+      "Organization: aquasecurity",
+      "Tool: trivy-0.48.3"
+    ],
+    "created": "2024-01-25T13:14:02Z"
+  },
+  "packages": [
+    {
+      "name": "acl",
+      "SPDXID": "SPDXRef-Package-c0b618dbad82909f",
+      "versionInfo": "2.3.1-3.el9",
+      "supplier": "Organization: Red Hat, Inc.",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "MD5",
+          "checksumValue": "271019b47552bdf6f99fa780978e4694"
+        }
+      ],
+      "sourceInfo": "built package from: acl 2.3.1-3.el9",
+      "licenseConcluded": "GPL-2.0-or-later",
+      "licenseDeclared": "GPL-2.0-or-later",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:rpm/redhat/acl@2.3.1-3.el9?arch=x86_64&distro=redhat-9.3"
+        }
+      ],
+      "attributionTexts": [
+        "PkgID: acl@2.3.1-3.el9.x86_64",
+        "LayerDiffID: sha256:f3b3295c500fd03d3add532f2f733e7a592a4ce7832c6a90d099d78772b3c141"
+      ],
+      "primaryPackagePurpose": "LIBRARY"
+    }
+  ],
+  "files": [
+    {
+      "fileName": "app/app.jar/BOOT-INF/lib/logback-classic-1.4.11.jar",
+      "SPDXID": "SPDXRef-File-77f9cd140a5f8f9a",
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "ecba70667a7c5baafebfb033077c4910ee286e26"
+        }
+      ],
+      "copyrightText": ""
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-ContainerImage-c89c58730eb82ab6",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}
