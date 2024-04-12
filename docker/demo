@@ -1,0 +1,53 @@
+#FROM ghcr.io/interlynk-io/sbomqs:v0.0.27 as sbomqs-bin
+
+
+FROM debian:bookworm-slim@sha256:ccb33c3ac5b02588fc1d9e4fc09b952e433d0c54d8618d0ee1afadf1f3cf2455
+
+
+
+LABEL org.opencontainers.image.base.digest="sha256:ccb33c3ac5b02588fc1d9e4fc09b952e433d0c54d8618d0ee1afadf1f3cf2455"
+LABEL org.opencontainers.image.base.name="debian:bookworm-slim"
+
+# Set environment variables to avoid any interactive dialog during the build
+ENV DEBIAN_FRONTEND=noninteractive
+
+## UNINSTALL XZ
+
+# Install required dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    gnupg2 \
+    build-essential \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN wget https://archive.org/download/xz-5.6.1.tar.gz/xz-5.6.1.tar.gz \
+    && tar -xf xz-5.6.1.tar.gz \
+    && cd xz-5.6.1 \
+# Configure, build, and install xz
+    && ./configure \
+    && make \
+    && make install
+
+# Install Syft
+#RUN curl -sSL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh
+
+#COPY xz-5.6.1.tar.gz ./
+
+
+
+##Clean up
+RUN apt-get remove --purge -y \
+    build-essential \
+    wget \
+    && apt-get autoremove -y \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /xz-5.6.1.tar.gz /xz-5.6.1
+
+# Reset the default frontend
+ENV DEBIAN_FRONTEND=
+#COPY --from=sbomqs-bin /app/sbomqs /bin/
+
+
+# Set the entrypoint command
+#ENTRYPOINT ["syft"]
